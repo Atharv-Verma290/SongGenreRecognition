@@ -1,3 +1,11 @@
-print("test")
-print("Test -2")
-print("This statement should only be in the develop branch.")
+from flask import Flask, render_template
+
+app = Flask(__name__)
+
+@app.route('/')
+def index():
+  return render_template('home.html')
+
+if __name__ == '__main__':
+  app.run(debug=True)
+
