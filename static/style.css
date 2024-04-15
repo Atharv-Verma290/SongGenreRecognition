@@ -1,0 +1,32 @@
+body{
+    background-color: #42BFDD;
+    text-align: center;
+    margin: 0;
+}
+
+.logo{
+    height: 80px;
+    width: 80px;
+    border: 2px red solid;
+    border-radius: 15px;
+    position: absolute;
+    top: 1  ;
+   
+}
+
+#GhubLogo{
+    right: 0;
+}
+
+
+.navbar{
+    background-color: #6320EE;
+    height: 100px;
+    width: 100%;
+    display: inline-flex;
+    flex-direction: row;
+   align-content: space-between;
+   padding-top: 15px;
+   
+    
+}
