@@ -1,32 +1,45 @@
-body{
-    background-color: #42BFDD;
-    text-align: center;
+body {
     margin: 0;
+    padding: 0;
+    font-family: 'Karla', sans-serif;
+    box-sizing: border-box;
+    background-color: lightblue;
+    height: 90vh;
+}
+
+
+
+.form {
+    background-color: red;
+    height: max-content;
+    padding: 1em;
+    margin: 0 auto;
+    width: 100%;
+    display:inline-flex;
+    /* justify-content:space-between; */
+    margin-bottom: 2em;
 }
 
 .logo{
-    height: 80px;
-    width: 80px;
+    height: 60px;
+    width: 100px;
     border: 2px red solid;
     border-radius: 15px;
+    display: block;
+    background: #4E9CAF;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    line-height: 25px;
+}
+   
+
+
+.GhubLogo{
     position: absolute;
-    top: 1  ;
-   
-}
-
-#GhubLogo{
     right: 0;
+    padding-right: 10px;
 }
 
-
-.navbar{
-    background-color: #6320EE;
-    height: 100px;
-    width: 100%;
-    display: inline-flex;
-    flex-direction: row;
-   align-content: space-between;
-   padding-top: 15px;
-   
-    
-}
