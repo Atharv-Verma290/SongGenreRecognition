@@ -17,7 +17,7 @@ body {
     width: 100%;
     display:inline-flex;
     /* justify-content:space-between; */
-    margin-bottom: 2em;
+    /* margin-bottom: 2em; */
 }
 
 .logo{
@@ -43,3 +43,32 @@ body {
     padding-right: 10px;
 }
 
+section{
+    border: 2px black solid;
+    width: 60%;
+    margin: auto auto;
+    height: 60%;
+    margin-top: 60px;
+    display: table;
+   text-align: center;
+    
+}
+
+button{
+    width: 20%;
+    padding: 20px 30px;
+   display: table-cell;
+   vertical-align: bottom;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: orange;
+    color: white;
+    text-align: center;
+  }
+
+  
