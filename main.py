@@ -7,7 +7,7 @@ def index():
   return render_template('homePage.html')
 
 @app.route('/process', methods = ['POST', 'GET'])
-def fileRecognizer():
+def handle_upload():
   raw_file = request.files['file']
   if raw_file.filename != '':
     if raw_file.filename.lower().endswith('.wav'):
@@ -17,6 +17,8 @@ def fileRecognizer():
   else:
     return "No file uploaded."
   return render_template('process.html')
+
+
 
 if __name__ == '__main__':
   app.run(debug=True)
