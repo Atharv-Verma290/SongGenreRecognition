@@ -19,11 +19,22 @@
         </a>
     </div>
   </header>
-  {% block content %}
-  
-  {% endblock  %}
+  <div class="input-container">
+      <label for="input-file" id="drop-area">
+        <input type="file"  name="" id="input-file" hidden>
+        <div id="file-view">
+          <img src="..\static\upload.png" height="180px" alt="">
+          <div id="file-upload-filename">test</div>
+          <p> Drag and Drop or click here <br> to upload file</p>
+          <span>Upload any images from the desktop</span>
+          <br>
+          
+        </div>
+      </label>
+  </div>
   <footer>
     <p>footer</p>
   </footer>
+  <script src="..\static\index.js"></script>
 </body>
 </html>
