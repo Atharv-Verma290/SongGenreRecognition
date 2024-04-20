@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect, url_for
 import tensorflow
 from tensorflow import keras
 import numpy as np
@@ -10,8 +10,9 @@ app = Flask(__name__)
 def index():
   return render_template('homePage.html')
 
-def extract_features(file):
-  audio, sample_rate = librosa.load(file, res_type='kaiser_fast')
+def feature_extractor(file):
+  audio, sample_rate = librosa.load(file, res_type='kaiser_best', duration=30)
+
   # extract mfccs
   mfccs = librosa.feature.mfcc(y=audio, sr=sample_rate, n_mfcc=40)
   mfccs_scaled = np.mean(mfccs,axis=1)
@@ -28,24 +29,49 @@ def extract_features(file):
   # combine features
   combined_features = np.concatenate([mfccs_scaled,zero_crossing_rate_scaled, rms_scaled, tempo])
 
-  
-
   return combined_features
 
-def classification():
-  pass
 
-@app.route('/process', methods = ['POST', 'GET'])
+
+def decoder(value):
+  decoded_value = None
+  match value:
+    case 0: decoded_value = "blues"
+    case 1: decoded_value = "classical"
+    case 2: decoded_value = "country"
+    case 3: decoded_value = "disco"
+    case 4: decoded_value = "hiphop"
+    case 5: decoded_value = "jazz"
+    case 6: decoded_value = "pop"
+    case 7: decoded_value = "reggae"
+    case 8: decoded_value = "rock"
+    case 9: decoded_value = "metal"
+
+  return decoded_value
+
+
+def allowed_file(filename):
+    return filename.endswith(".wav")
+
+
+@app.route('/test1', methods = ['POST', 'GET'])
 def handle_upload():
-  raw_file = request.files['file']
-  if raw_file.filename != '':
-    if raw_file.filename.lower().endswith('.wav'):
-      return "File is a valid .wav file."
-    else:
-      return "File is invalid."
+  if request.method == "POST":
+    file = request.files["file"]
+    if file and allowed_file(file.filename):
+      #do features extraction
+      data = feature_extractor(file)
+      data = np.reshape(data, (1, -1))  # Reshape the data
+      print(data)
+      print(data.shape)
+      genre_classifier = keras.models.load_model("classifier.keras", compile=False)
+      predicted_class = np.argmax(genre_classifier.predict(data))
+      predicted_genre = decoder(predicted_class)
+
+      return f"Your predicted genre is {predicted_genre}."
+    return "<h1>Your file is not correct.</h1>"
   else:
-    return "No file uploaded."
-  return render_template('process.html')
+    return render_template("test1.html")
 
 
 
