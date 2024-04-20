@@ -115,4 +115,4 @@ model.fit(X_train, y_train, batch_size = 32, epochs=100, verbose=1)
 
 model.evaluate(X_test, y_test)
 
-model.save("classifier.keras")
+# model.save("classifier.keras")
