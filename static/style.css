@@ -3,10 +3,15 @@ body {
     padding: 0;
     font-family: 'Karla', sans-serif;
     box-sizing: border-box;
-    background-color: lightblue;
+    background-color:  #648de5ff;
     height: 90vh;
 }
 
+/* --sage: #cdc392ff;
+--alabaster: #e8e5daff;
+--jordy-blue: #9eb7e5ff;
+--cornflower-blue: #648de5ff;
+--federal-blue: #080357ff; */
 
 
 .navbar {
@@ -21,18 +26,20 @@ body {
 }
 
 .logo{
-    height: 60px;
+
     width: 100px;
-    border: 2px red solid;
-    border-radius: 15px;
+    border-radius: 50%;
     display: block;
-    background: #4E9CAF;
-    padding: 10px;
-    text-align: center;
+    /* background-image: url("app_logo.jpeg"); */
     border-radius: 5px;
     color: white;
     font-weight: bold;
     line-height: 25px;
+}
+
+#app-logo{
+    border-radius: 50%;
+    width: 80px;
 }
    
 
