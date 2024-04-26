@@ -3,7 +3,7 @@ body {
     padding: 0;
     font-family: 'Karla', sans-serif;
     box-sizing: border-box;
-    background-color:  #648de5ff;
+    background-color:  #9eb7e5ff;
     height: 90vh;
 }
 
@@ -15,7 +15,7 @@ body {
 
 
 .navbar {
-    background-color: red;
+    background-color: #648DE5FF ;
     height: max-content;
     padding: 1em;
     margin: 0 auto;
