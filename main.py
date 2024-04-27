@@ -54,7 +54,7 @@ def allowed_file(filename):
     return filename.endswith(".wav")
 
 
-@app.route('/test1', methods = ['POST', 'GET'])
+@app.route('/process', methods = ['POST', 'GET'])
 def handle_upload():
   if request.method == "POST":
     file = request.files["file"]
@@ -71,7 +71,7 @@ def handle_upload():
       return f"Your predicted genre is {predicted_genre}."
     return "<h1>Your file is not correct.</h1>"
   else:
-    return render_template("test1.html")
+    return render_template("result.html") #pass parameters class and image
 
 
 
