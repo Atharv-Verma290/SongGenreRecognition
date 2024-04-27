@@ -1,4 +1,6 @@
 body {
+    height: 100%;
+    overflow: hidden;
     margin: 0;
     padding: 0;
     font-family: 'Karla', sans-serif;
@@ -15,7 +17,7 @@ body {
 
 
 .navbar {
-    background-color: #648DE5FF ;
+    background-color: #648DE5 ;
     height: max-content;
     padding: 1em;
     margin: 0 auto;
@@ -37,9 +39,15 @@ body {
     line-height: 25px;
 }
 
-#app-logo{
+.app-logo{
     border-radius: 50%;
     width: 80px;
+}
+
+#result-logo{
+    width: 200px;
+    /* border-radius: 50%; */
+    clip-path: circle();
 }
    
 
@@ -85,15 +93,16 @@ footer {
     display: flex;
     align-content: center;
     justify-content: center;
+    background-color: ;
 }
 
-#drop-area{
+.drop-area{
     width: 500px; 
     height: 300px;
     padding: 30px;
     text-align: center;
     border-radius: 20px;
-    background-color: white;
+    background-color: #e8e5daff;
 
 }
 
@@ -104,3 +113,4 @@ footer {
     border: 2px dashed #bbb5ff;
     background: #f7f8ff;
 }
+
