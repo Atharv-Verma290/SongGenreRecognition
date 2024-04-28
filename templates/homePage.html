@@ -2,10 +2,10 @@
 
 
 {% block content %}
-<section>
+<section id="welcome-card">
   <div id="welcome-txt">
-    <h1>Welcome to Song Genre Detector</h1>
-    <h3>Upload your wave file to get an analysis report</h3>
+    <h1 style="font-size: 36px">Welcome to Song Genre Detector</h1>
+    <h3 style="font-size: 20px">Upload your wave file to get the genre</h3>
   </div>
   <br>
   <a href="{{url_for('handle_upload')}}">
