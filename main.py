@@ -68,10 +68,10 @@ def handle_upload():
       predicted_class = np.argmax(genre_classifier.predict(data))
       predicted_genre = decoder(predicted_class)
 
-      return f"Your predicted genre is {predicted_genre}."
+      return render_template("result.html" ,genre= predicted_genre)
     return "<h1>Your file is not correct.</h1>"
   else:
-    return render_template("process.html") #pass parameters class and image
+    return render_template("process.html")
 
 
 
