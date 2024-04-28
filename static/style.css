@@ -130,7 +130,7 @@ footer {
   }
 
 #about-us{
-    padding: 20px;
+    padding: 30px;
 }
 
 .input-container{
@@ -140,7 +140,7 @@ footer {
     display: flex;
     align-content: center;
     justify-content: center;
-   
+    margin-top: 250px;
 }
 
 .drop-area{
@@ -161,3 +161,18 @@ footer {
     background: #f7f8ff;
 }
 
+#submit-btn{
+    text-shadow: rgba(0, 0, 0, 0.25) 0 3px 8px;
+    background-color: #648DE5;
+    color: #E8E5DA;
+    border-radius: 6px;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    padding: 6px 16px;
+    text-align: center;
+    border-radius: 8px;
+    border-style: none;
+}
