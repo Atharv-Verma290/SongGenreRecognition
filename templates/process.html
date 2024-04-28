@@ -6,17 +6,18 @@
 {% block content %}
 
 <div class="input-container">
-    <label for="input-file" class="drop-area">
+  <form action="/process" method="post" enctype="multipart/form-data" class="drop-area">
+    <label for="input-file" >
       <input type="file"  name="" id="input-file" hidden>
       <div id="file-view">
         <img src="..\static\upload.png" height="180px" alt="">
-        <div id="file-upload-filename">test</div>
+        <div id="file-upload-filename"></div>
         <p> Drag and Drop or click here <br> to upload file</p>
-        <span>Upload any images from the desktop</span>
         <br>
-        
+        <button type="submit">Submit File</button>
       </div>
     </label>
+  </form>
 </div>
   
 {% endblock content %}

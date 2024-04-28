@@ -71,7 +71,7 @@ def handle_upload():
       return f"Your predicted genre is {predicted_genre}."
     return "<h1>Your file is not correct.</h1>"
   else:
-    return render_template("result.html") #pass parameters class and image
+    return render_template("process.html") #pass parameters class and image
 
 
 
