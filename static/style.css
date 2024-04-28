@@ -74,12 +74,40 @@ section{
     
 }
 
+#welcome-card{
+    background-color: #E8E5DA;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 250px;
+    box-shadow: 0.6em 0.6em 1.2em #648de5ff,
+               -0.5em -0.5em 1em #648de5ff;
+   border-radius: 20px;
+   height: auto;
+   padding: 40px;
+}
+
 #welcome-txt{
-line-height: 50px;
+    margin: 30px;
+    line-height: 1.8;
+    color: #080357ff;
 }
 
 #getstarted-btn{
-  margin: 150px;
+  margin-bottom: 5px;
+  border-radius: 8px;
+  border-style: none;
+  box-sizing: border-box;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  height: 4rem;
+  padding: 0 1.6rem;
+  text-align: center;
+  text-shadow: rgba(0, 0, 0, 0.25) 0 3px 8px;
+  background-color: #648DE5;
+  color: #E8E5DA;
 }
 
 /* .button{
@@ -113,13 +141,13 @@ footer {
     bottom: 0;
     width: 100%;
     height: auto;
-    background-color: orange;
+    background-color: #E8E5DA;
     color: white;
     text-align: center;
   }
 
 #about-us{
-    padding: 10px;
+    padding: 20px;
 }
 
 .input-container{
