@@ -17,6 +17,7 @@ body {
 
 a{
     text-decoration: none;
+    color: black;
 }
 .navbar {
     background-color: #648DE5 ;
@@ -52,7 +53,9 @@ a{
     clip-path: circle();
 }
    
-
+#header-name{
+    text-align: center;
+}
 
 .GhubLogo{
     position: absolute;
@@ -61,22 +64,31 @@ a{
 }
 
 section{
-    border: 2px black solid;
+    /* border: 2px black solid; */
     width: 60%;
-    margin: auto auto;
+    margin: auto;
     height: 60%;
     margin-top: 60px;
-    display: table;
+    display: flex;
+    flex-direction: column;
    text-align: center;
     
 }
 
-.button{
+#welcome-txt{
+line-height: 50px;
+}
+
+#getstarted-btn{
+  margin: 150px;
+}
+
+/* .button{
     width: 20%;
     padding: 20px 30px;
    display: table-cell;
    vertical-align: bottom;
-}
+} */
 
 footer {
     position: fixed;
