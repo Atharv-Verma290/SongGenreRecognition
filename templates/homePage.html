@@ -3,11 +3,13 @@
 
 {% block content %}
 <section>
-  <div id="input">
-  
+  <div id="welcome-txt">
+    <h1>Welcome to Song Genre Detector</h1>
+    <h3>Upload your wave file to get an analysis report</h3>
   </div>
+  <br>
   <a href="{{url_for('handle_upload')}}">
-    <button>Submit</button>
+    <button id="getstarted-btn">Get Started</button>
   </a>
 </section>
 
