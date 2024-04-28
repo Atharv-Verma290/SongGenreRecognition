@@ -73,6 +73,10 @@ def handle_upload():
   else:
     return render_template("process.html")
 
+@app.route('/about-us')
+def about():
+  return render_template("about-us.html")
+
 
 
 if __name__ == '__main__':

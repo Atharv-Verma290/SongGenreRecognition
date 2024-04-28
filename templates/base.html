@@ -9,7 +9,7 @@
 <body>
   <header class="navbar">
     <div>
-      <a class="logo" href="#">
+      <a class="logo" href="{{url_for('index')}}">
         <img src="..\static\app_logo.jpeg" id="app-logo">
       </a>
     </div>
@@ -26,7 +26,7 @@
   {% endblock content %}
   <footer>
    <div id="about-us">
-    <a href="" >
+    <a href="{{url_for('about')}}" >
       About Us
     </a>
    </div>
