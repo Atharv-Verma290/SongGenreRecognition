@@ -1,9 +1,7 @@
 /atharv_venv
 /arjun_venv
-/Data/images_original
-/saved_models
 /.DS_Store
-
 /node_modules
 /package-lock.json
 /package.json
+/ipynb_checkpoints
