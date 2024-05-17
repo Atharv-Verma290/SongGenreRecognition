@@ -1,9 +1,8 @@
 /atharv_venv
 /arjun_venv
 /Data/images_original
-/.DS_Store
 /saved_models
-/saved_data
+/.DS_Store
 
 /node_modules
 /package-lock.json
