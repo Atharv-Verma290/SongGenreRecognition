@@ -2,6 +2,4 @@
 /arjun_venv
 /.DS_Store
 /node_modules
-/package-lock.json
-/package.json
 /ipynb_checkpoints
